@@ -1,0 +1,38 @@
+.ticket-display-container {
+  width: 73%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.tickets-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 10px;
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .ticket-display-container {
+    width: 60%;
+    padding: 0.8rem;
+  }
+
+  .tickets-grid {
+    gap: 0.8rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .ticket-display-container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .tickets-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    padding: 5px;
+  }
+}

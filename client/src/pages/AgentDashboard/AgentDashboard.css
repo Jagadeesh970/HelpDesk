@@ -1,0 +1,43 @@
+.agent-dashboard-container {
+  padding: 2rem;
+}
+
+.agent-tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.agent-ticket-card {
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.agent-ticket-card .ticket-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.agent-ticket-card select {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.admin-ticket-card, .agent-ticket-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

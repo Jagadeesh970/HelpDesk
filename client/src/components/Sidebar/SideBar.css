@@ -1,0 +1,11 @@
+.sidebar-container {
+  width: 220px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.sidebar-list div {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
