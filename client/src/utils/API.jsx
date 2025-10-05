@@ -1,12 +1,12 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // backend URL
+  baseURL: "https://helpdesk-hqwb.onrender.com/api",
 });
 
-// Add JWT token automatically if stored in localStorage
+
 API.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token"); // saved after login
+  const token = localStorage.getItem("token"); 
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
