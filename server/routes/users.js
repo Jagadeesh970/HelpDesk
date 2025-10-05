@@ -4,10 +4,9 @@ import { protect, authorize } from "../middleware/auth.js";
 
 const router = express.Router();
 
-// Admin can get all users
 router.get("/", protect, authorize("admin"), async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find().select("-password");
     res.json(users);
   } catch (err) {
     res.status(500).json({ message: err.message });

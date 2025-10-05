@@ -1,14 +1,12 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-     "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "node utils/seedUsers.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "body-parser": "^2.2.0",

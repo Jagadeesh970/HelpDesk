@@ -1,14 +1,16 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bcrypt from "bcrypt";
-import User from "../models/User.js"; // adjust path if needed
+import User from "../models/User.js";
 
 dotenv.config();
 
 const seedUsers = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("MongoDB connected");
+    console.log(" MongoDB connected");
+
+    await User.deleteMany({}); // clean first
 
     const users = [
       {
@@ -32,7 +34,7 @@ const seedUsers = async () => {
     ];
 
     await User.insertMany(users);
-    console.log("Users seeded successfully");
+    console.log(" Users seeded successfully");
     process.exit(0);
   } catch (error) {
     console.error(error);
